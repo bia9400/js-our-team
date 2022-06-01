@@ -1,6 +1,6 @@
 const container = document.querySelector(".team-container");
 const linkCard = ["img/angela-caroll-chief-editor.jpg", "img/angela-lopez-social-media-manager.jpg", "img/barbara-ramos-graphic-designer.jpg", "img/new-team-member-01.jpg", "img/new-team-member-02.jpg", "img/new-team-member-03.jpg", "img/new-team-member-04.jpg", "img/scott-estrada-developer.jpg", "img/walter-gordon-office-manager.jpg", "img/wayne-barnett-founder-ceo.jpg",];
-
+const cardButton = document.getElementById("mybutton")
 
 function generateName(numbersOfName) {
     let names = ["Biagio", "Pietro", "Giovanni", "Luigi", "Carmelo", "Alice", "Erica", "Silvia", "Paolo", "Settimio", "Pierpaolo", "Florian", "Felice", "Marco", "Elisa", "Antonio", "Antonia", "Clara", "Katia", "Giuseppe", "Alfoso", "Ilary", "Domenico", "Vera", "Alberto", "Micele", "Michela", "Andrea", "Grazia", "Simone"];
@@ -71,12 +71,25 @@ function printCard(numerodicard) {
     let x = createArrayobject(numerodicard);
     for (let i = 0; i < numerodicard; i++) {
         createCard(x[i])
-        console.log("Nome: "+x[i].name+",","MansioneSvolta: "+x[i].job+","," (link della foto)"+x[i].link);
+        console.log("Nome: " + x[i].name + ",", "MansioneSvolta: " + x[i].job + ",", " (link della foto)" + x[i].link);
     }
     console.log(x);
-    
-   
+
+
 
 }
 
+
 printCard(10)
+
+cardButton.addEventListener("click", function () {
+    
+    let obect={
+        name:prompt("Inserisci nome e cognome"),
+        job:prompt("Inserisci la tua mansione"),
+        link:prompt("Inserisci un link valido della tua foto")
+        
+
+    }
+    createCard(obect)
+})
