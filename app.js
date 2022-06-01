@@ -41,7 +41,7 @@ function createArrayobject(numeroDiOggetti) {
     }
     return createdArray
 }
-console.log(createArrayobject(5));
+
 
 
 
@@ -71,7 +71,12 @@ function printCard(numerodicard) {
     let x = createArrayobject(numerodicard);
     for (let i = 0; i < numerodicard; i++) {
         createCard(x[i])
+        console.log("Nome: "+x[i].name+",","MansioneSvolta: "+x[i].job+","," (link della foto)"+x[i].link);
     }
+    console.log(x);
+    
+   
 
 }
 
+printCard(10)
